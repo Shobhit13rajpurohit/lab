@@ -39,18 +39,22 @@ header {
     gap: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #fff; /* This will color the text next to the logo */
 }
 
 .logo-icon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #FF6B35, #F7931E, #FFB627);
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+    /* The background is now covered by the image,
+       but it's good for a fallback color. */
+    background: #FF6B35;
+}
+
+.logo-icon img {
+    width: 100%;      /* Make image fill the container's width */
+    height: 100%;     /* Make image fill the container's height */
+    border-radius: 8px; /* Match the container's rounded corners */
 }
 
 nav {
