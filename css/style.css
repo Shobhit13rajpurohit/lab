@@ -131,6 +131,7 @@ nav a:hover {
 .side-icon-bar a:hover {
     background: #FF6B35;
 }
+
 .hero {
     height: 500px;
     display: flex;
@@ -140,7 +141,7 @@ nav a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background: url('images/jechome.png') center/cover no-repeat;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Placeholder background */
 }
 
 .slider-container {
