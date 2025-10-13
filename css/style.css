@@ -134,7 +134,6 @@ nav a:hover {
     background: #FF6B35;
     right: 10px;
 }
-
 .hero {
     height: 800px;
     display: flex;
@@ -142,14 +141,26 @@ nav a:hover {
     justify-content: center;
     color: white;
     text-align: center;
-    position: relative;
+    position: relative; /* This is crucial for the overlay */
     overflow: hidden;
-    background-image: url("../images/jechome.png");
+    background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    isolation: isolate; /* Ensures content stays above the overlay */
 }
 
+/* The overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Light black overlay */
+    z-index: -1; /* Puts the overlay behind the content */
+}
 /* .hero::before {
     content: '';
     position: absolute;
@@ -541,103 +552,156 @@ nav a:hover {
     color: #333;
 }
 
-/* Footer */
 footer {
-    color: #fff;
-}
-
-.footer-links {
-    background: #f1f1f1;
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    color: #000;
-}
-
-.footer-contact {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border-top: 1px solid #ddd;
-    color: #000;
-}
-
-.footer-column h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 8px;
-}
-
-.footer-column a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-}
-
-.footer-column a:hover {
-    text-decoration: underline;
-}
-
-.footer-column p {
-    font-size: 14px;
+    color: #333;
     line-height: 1.6;
 }
 
+.footer-main {
+    background-color: #f7f8fa;
+    padding: 50px 80px;
+}
+
+/* --- Top Section: Links --- */
+.footer-links-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-column h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul a {
+    font-size: 0.9rem;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.footer-column ul a:hover {
+    color: #007bff;
+}
+
+.footer-column .important {
+    color: #d9534f;
+    font-weight: 500;
+}
+
+.column-group {
+    display: flex;
+    gap: 30px;
+}
+
+/* --- Middle Section: Addresses --- */
+.footer-address-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-top: 40px;
+}
+
+.address-column h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.address-column p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* --- Bottom Section: Copyright & Social --- */
 .footer-bottom {
-    background: #fff;
-    padding: 15px 20px;
+    background-color: #ffffff;
+    padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #000;
-    border-top: 1px solid #ddd;
+    flex-wrap: wrap;
+    border-top: 1px solid #e0e0e0;
 }
 
-.footer-social {
+.follow-us {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Adjusted gap for circular icons */
 }
 
-.footer-social span {
-    font-size: 14px;
+.follow-us span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 5px;
 }
 
-.footer-social img {
-    width: 35px;
-    height: 35px;
-}
-
-.footer-legal {
-    display: flex;
-    gap: 20px;
+/* This is the new style for the circular icons */
+.follow-us a {
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 50%;       /* This makes it a circle */
+    font-size: 1rem;          /* Icon size */
+    color: #333;              /* Icon color */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.footer-legal span {
-    font-size: 14px;
+/* Hover effect for the icons */
+.follow-us a:hover {
+    background-color: #007bff; /* Example hover color */
+    color: #fff;               /* White icon on hover */
 }
 
-.footer-legal a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .footer-main {
+        padding: 40px;
+    }
+    .footer-bottom {
+        padding: 20px 40px;
+    }
+    .footer-links-section {
+        grid-template-columns: 1fr 1fr;
+    }
+    .other-links-column {
+        grid-column: span 2;
+    }
+    .footer-address-section {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.footer-legal a:hover {
-    text-decoration: underline;
+@media (max-width: 768px) {
+    .footer-links-section, .footer-address-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .other-links-column {
+        grid-column: auto;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
+
 
 /* Stories of Excellence Section */
 .stories {
