@@ -212,96 +212,168 @@ nav a:hover {
 
 /* Stats Section */
 .stats {
-    background: #f5f5f5;
-    padding: 60px 20px;
-}
-
-.stats-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    text-align: center;
-}
-
-.stat {
-    padding: 20px;
-}
-
-.stat-number {
-    font-size: 48px;
-    font-weight: bold;
-    color: #FF6B35;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Highlights Section */
-.highlights {
     padding: 60px 20px;
     background: #fff;
 }
 
-.highlights-content {
-    max-width: 1400px;
+.stats-content {
+    max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: left;
 }
 
-.highlight-title {
-    font-size: 32px;
-    margin-bottom: 50px;
+.stat-box {
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     position: relative;
-    padding-bottom: 15px;
+    border-right: none;
 }
 
-.highlight-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(to right, #FF6B35, #4A90E2);
+.stat-box:last-child {
+    border-right: 1px solid #e0e0e0;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.stats-disclaimer {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    font-size: 12px;
+    color: #888;
+    text-align: left;
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.highlights-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .highlight-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-bottom: 40px;
 }
 
 .highlight-card {
-    background: #f9f9f9;
-    padding: 40px;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background: #f7f7f7;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
 .highlight-card h3 {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 600;
     margin-bottom: 15px;
-    color: #333;
+    color: #000;
 }
 
 .highlight-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.8;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
 }
 
-.highlight-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+.card-arrow {
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-graphic-top-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #00aef0;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.card-graphic-top-blue::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 60px;
+    height: 60px;
+    background-color: #0073b0;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+
+.card-graphic-top-yellow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffc107;
+}
+
+.card-graphic-top-pink {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 10px;
+    height: 40px;
+    background-color: #e83e8c;
+    transform: skewX(-20deg);
+}
+.card-graphic-top-pink::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 10px;
+    height: 50px;
+    background-color: #e83e8c;
+    transform: skewX(-20deg);
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-dot.active {
+    background: #333;
 }
 
 /* Schools Section */
