@@ -1344,41 +1344,84 @@ footer {
     color: #f59e0b;
 }
 
-.stories-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
+/* The main container that holds everything */
+.carousel-wrapper {
+    position: relative; /* This is the anchor for the absolute-positioned buttons */
+    width: 100%;
+    /* Add your carousel styles here */
 }
 
+/* We don't need to style the nav container itself anymore */
+.stories-nav { }
+
+/* Base style for both buttons */
 .nav-button {
-    /* Shape and Size */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; /* Makes the button a perfect circle */
-    
-    /* Arrow Centering */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    /* Styling */
-    background: #e5e7eb;
-    border: 2px solid #3b82f6;
-    font-size: 24px; /* Makes the arrow larger */
-    font-weight: bold;
-    color: #1e3a8a;
+    /* Positioning */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    /* Appearance */
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     cursor: pointer;
-    transition: all 0.3s ease;
+
+    /* Icon Centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Smooth transition for all effects */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
 }
+
+/* Style for the SVG icon inside */
+.nav-button svg {
+    stroke: #333;
+    transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+/* Positioning for the 'Previous' button */
+.nav-button.prev {
+    left: 20px; /* Adjust distance from the edge */
+}
+
+/* Positioning for the 'Next' button */
+.nav-button.next {
+    right: 20px; /* Adjust distance from the edge */
+}
+
+
+/* --- DYNAMIC HOVER EFFECTS --- */
 
 .nav-button:hover {
-    background: #3b82f6;
-    color: #fff;
-    border-color: #1e3a8a;
-    transform: scale(1.1); /* Slightly larger hover effect */
+    background-color: #007aff; /* Fill background on hover */
+    border-color: #007aff;
 }
 
+.nav-button:hover svg {
+    stroke: #fff; /* Change arrow color to white */
+}
+
+/* Move the 'Previous' arrow icon to the left on hover */
+.nav-button.prev:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Move the 'Next' arrow icon to the right on hover */
+.nav-button.next:hover svg {
+    transform: translateX(3px);
+}
+
+/* A subtle press-down effect when clicked */
+.nav-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
 .view-all-btn {
     display: inline-block;
     padding: 12px 30px;
