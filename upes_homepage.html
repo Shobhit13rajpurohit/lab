@@ -186,7 +186,60 @@
         </div>
     </section>
 
-    
+   <!-- Team Section -->
+<section class="teamSection">
+  <div class="teamHeaderWrapper">
+    <h2 class="teamHeading">Faculty</h2>
+    <div class="headingUnderline"></div>
+  </div>
+
+  <div class="teamGridContainer">
+    <!-- Member Card 1 -->
+    <div class="memberCard" data-member="dr-sharma">
+      <div class="memberPhotoFrame">
+        <img src="https://picsum.photos/400/500?random=1" alt="Dr. Ram K Sharma" class="memberPortrait">
+      </div>
+      <div class="memberDetails">
+        <h3 class="memberName">Dr. Ram K Sharma</h3>
+        <p class="memberTitle">Vice Chancellor, UPES</p>
+        <div class="bioDivider"></div>
+        <p class="memberBio">
+          A Chevening Gurukul Fellow at the University of Oxford and also a Fulbright Nehru Scholar ...
+        </p>
+      </div>
+    </div>
+
+    <!-- Member Card 2 -->
+    <div class="memberCard" data-member="prof-chellaboina">
+      <div class="memberPhotoFrame">
+        <img src="https://picsum.photos/400/500?random=2" alt="Prof. Vijaysekhar Chellaboina" class="memberPortrait">
+      </div>
+      <div class="memberDetails">
+        <h3 class="memberName">Prof. Vijaysekhar Chellaboina</h3>
+        <p class="memberTitle">Dean, School of Computer Science</p>
+        <div class="bioDivider"></div>
+        <p class="memberBio">
+          An alumnus of IIT Madras and Florida Institute of Technology, Prof. Vijaysekhar is a reci...
+        </p>
+      </div>
+    </div>
+
+    <!-- Member Card 3 -->
+    <div class="memberCard" data-member="prof-bhatt">
+      <div class="memberPhotoFrame">
+        <img src="https://picsum.photos/400/500?random=3" alt="Prof. Bhaskar Bhatt" class="memberPortrait">
+      </div>
+      <div class="memberDetails">
+        <h3 class="memberName">Prof. Bhaskar Bhatt</h3>
+        <p class="memberTitle">Dean, School of Design</p>
+        <div class="bioDivider"></div>
+        <p class="memberBio">
+          Design Leader with over 22 years of experience in institution building, teaching, and acti...
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Why JEC? Section -->
 <section class="faculty">
     <div class="faculty-content">
@@ -259,49 +312,124 @@
 </section>
 
     <!-- Student Outcomes Section -->
-    <section class="outcomes">
-        <div class="outcomes-content">
-            <h2 class="outcomes-title">Student Outcomes</h2>
-            <div class="outcomes-grid">
-                <div class="outcome-card">
-                    <h3>Placement Cell</h3>
-                    <p>The Placement Cell at JEC provides consistent support to every student for internships and job
-                        opportunities.</p>
+<section class="outcomes">
+    <div class="outcomes-content">
+        <h2 class="outcomes-title">Student Success Stories</h2>
+        <p class="outcomes-subtitle">At JEC, we empower students to achieve their career goals through dedicated support, top-tier opportunities, and strong industry connections.</p>
+        <div class="outcomes-grid">
+            <div class="outcome-card" data-outcome="placement">
+                <div class="outcome-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
                 </div>
-                <div class="outcome-card">
-                    <h3>Top Recruiters</h3>
-                    <p>Recent placement sessions include 2021–22, 2022–23, 2023–24, and 2024–25, with top recruiters
-                        from IT, core engineering, and management sectors.</p>
+                <h3>Placement Cell</h3>
+                <p>Our dedicated Placement Cell offers personalized support, securing internships and job opportunities with leading companies for every student.</p>
+            </div>
+            <div class="outcome-card" data-outcome="recruiters">
+                <div class="outcome-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <path d="M20 8v6M23 11h-6"></path>
+                    </svg>
                 </div>
-                <div class="outcome-card">
-                    <h3>Career Outcomes</h3>
-                    <p>It works closely with leading organizations to ensure the best career outcomes for our students.
-                    </p>
+                <h3>Top Recruiters</h3>
+                <p>Our 2021–25 placement sessions attracted top recruiters from IT, core engineering, and management, offering diverse career paths.</p>
+            </div>
+            <div class="outcome-card" data-outcome="careers">
+                <div class="outcome-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                        <path d="M12 20l9-5.5V7L12 2 3 7v7.5L12 20z"></path>
+                        <path d="M12 12l6-3.5M12 12v8"></path>
+                    </svg>
                 </div>
+                <h3>Career Outcomes</h3>
+                <p>We collaborate with leading organizations to ensure exceptional career outcomes, preparing students for success in a competitive world.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Research & Innovation Section -->
     <section class="stories">
-        <div class="stories-content">
-            <h2 class="stories-title">Research & Innovation</h2>
-            <div class="stories-carousel">
-                <div class="story-card">
+    <div class="stories-content">
+        <h2 class="stories-title">Research & Innovation</h2>
+        <p class="stories-subtitle">Discover JEC's groundbreaking research initiatives, pushing the boundaries of technology to address global challenges.</p>
+        <div class="stories-carousel" id="research-carousel">
+            <div class="story-card" data-story="ai">
+                <img src="https://picsum.photos/400/200?random=1" alt="Artificial Intelligence Research" class="story-image">
+                <div class="story-content">
                     <h3>Artificial Intelligence</h3>
-                    <p>Pioneering AI-driven solutions for real-world challenges.</p>
-                </div>
-                <div class="story-card">
-                    <h3>Machine Learning</h3>
-                    <p>Developing scalable ML models for emerging economies.</p>
-                </div>
-                <div class="story-card">
-                    <h3>Robotics</h3>
-                    <p>Innovating in robotics and manufacturing engineering.</p>
+                    <p>Leading AI-driven innovations for healthcare, smart cities, and beyond.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about AI research">→</a>
                 </div>
             </div>
+            <div class="story-card" data-story="ml">
+                <img src="https://picsum.photos/400/200?random=2" alt="Machine Learning Research" class="story-image">
+                <div class="story-content">
+                    <h3>Machine Learning</h3>
+                    <p>Building scalable ML models to drive sustainable solutions for emerging economies.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about ML research">→</a>
+                </div>
+            </div>
+            <div class="story-card" data-story="robotics">
+                <img src="https://picsum.photos/400/200?random=3" alt="Robotics Research" class="story-image">
+                <div class="story-content">
+                    <h3>Robotics</h3>
+                    <p>Advancing robotics for next-generation manufacturing and automation.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about Robotics research">→</a>
+                </div>
+            </div>
+            <div class="story-card" data-story="iot">
+                <img src="https://picsum.photos/400/200?random=4" alt="IoT Research" class="story-image">
+                <div class="story-content">
+                    <h3>Internet of Things</h3>
+                    <p>Developing IoT solutions for smart infrastructure and connectivity.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about IoT research">→</a>
+                </div>
+            </div>
+             <div class="story-card" data-story="ai">
+                <img src="https://picsum.photos/400/200?random=1" alt="Artificial Intelligence Research" class="story-image">
+                <div class="story-content">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Leading AI-driven innovations for healthcare, smart cities, and beyond.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about AI research">→</a>
+                </div>
+            </div>
+            <div class="story-card" data-story="ml">
+                <img src="https://picsum.photos/400/200?random=2" alt="Machine Learning Research" class="story-image">
+                <div class="story-content">
+                    <h3>Machine Learning</h3>
+                    <p>Building scalable ML models to drive sustainable solutions for emerging economies.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about ML research">→</a>
+                </div>
+            </div>
+            <div class="story-card" data-story="robotics">
+                <img src="https://picsum.photos/400/200?random=3" alt="Robotics Research" class="story-image">
+                <div class="story-content">
+                    <h3>Robotics</h3>
+                    <p>Advancing robotics for next-generation manufacturing and automation.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about Robotics research">→</a>
+                </div>
+            </div>
+            <div class="story-card" data-story="iot">
+                <img src="https://picsum.photos/400/200?random=4" alt="IoT Research" class="story-image">
+                <div class="story-content">
+                    <h3>Internet of Things</h3>
+                    <p>Developing IoT solutions for smart infrastructure and connectivity.</p>
+                    <a href="#" class="story-arrow" aria-label="Learn more about IoT research">→</a>
+                </div>
+            </div>
+            
         </div>
-    </section>
+        <div class="stories-nav">
+    <button class="nav-button" onclick="scrollCarousel('research-carousel', -320)" aria-label="Previous story">&#8592;</button>
+    <button class="nav-button" onclick="scrollCarousel('research-carousel', 320)" aria-label="Next story">&#8594;</button>
+</div>
+        <a href="#" class="view-all-btn">Explore All Research</a>
+    </div>
+</section>
 
     <!-- Campus Life Section -->
     <section class="campus-life">
@@ -333,26 +461,42 @@
         </div>
     </section>
 
-    <!-- Campus Buzz Section -->
-    <section class="campus-buzz">
-        <div class="campus-buzz-content">
-            <h2 class="campus-buzz-title">Grievance Redressal</h2>
-            <div class="buzz-items">
-                <div class="buzz-item">
-                    <a href="#">Grievance Redressal Form</a>
-                </div>
+   <!-- Campus Buzz Section -->
+<section class="campus-buzz">
+    <div class="campus-buzz-content">
+        <h2 class="campus-buzz-title">Grievance Redressal</h2>
+        <p class="campus-buzz-subtitle">We are committed to addressing your concerns promptly and fairly. Access our resources to voice your grievances and connect with our support team.</p>
+        <div class="buzz-items">
+            <div class="buzz-item" data-buzz="form">
+                <img src="https://picsum.photos/100/100?random=1" alt="Grievance Form Icon" class="buzz-icon">
+                <h3>Grievance Form</h3>
+                <p>Submit your concerns through our online grievance redressal form.</p>
+                <a href="#" class="buzz-link" aria-label="Access Grievance Redressal Form">→</a>
+            </div>
+            <div class="buzz-item" data-buzz="committee">
+                <img src="https://picsum.photos/100/100?random=2" alt="Grievance Committee Icon" class="buzz-icon">
+                <h3>Grievance Committee</h3>
+                <p>Meet our dedicated team handling student and staff grievances.</p>
+                <a href="#" class="buzz-link" aria-label="Learn about Grievance Committee">→</a>
+            </div>
+            <div class="buzz-item" data-buzz="support">
+                <img src="https://picsum.photos/100/100?random=3" alt="Support Services Icon" class="buzz-icon">
+                <h3>Support Services</h3>
+                <p>Contact our support team for guidance and resolution.</p>
+                <a href="#" class="buzz-link" aria-label="Contact Support Services">→</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Take a Tour Section -->
-    <section class="take-a-tour">
-        <div class="take-a-tour-content">
-            <h2 class="take-a-tour-title">JEC 360° Virtual Campus Tour</h2>
-            <p>Explore our campus from anywhere in the world.</p>
-            <a href="#" class="tour-btn">Start Virtual Tour</a>
-        </div>
-    </section>
+<!-- Take a Tour Section -->
+<section class="take-a-tour">
+    <div class="take-a-tour-content">
+        <h2 class="take-a-tour-title">JEC 360° Virtual Campus Tour</h2>
+        <p class="take-a-tour-subtitle">Experience our vibrant campus from anywhere in the world with our immersive virtual tour.</p>
+        <a href="#" class="tour-btn">Start Virtual Tour</a>
+    </div>
+</section>
 
 
     <!-- Footer -->
@@ -507,6 +651,12 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(statsSection);
     }
 });
+</script>
+<script>
+function scrollCarousel(carouselId, scrollAmount) {
+    const carousel = document.getElementById(carouselId);
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
 </script>
 </body>
 
